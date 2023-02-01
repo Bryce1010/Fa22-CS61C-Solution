@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.4.3-61c.cc0f4a6" version="1.0">
-  This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
+<project source="3.8.0-61c.c58792e" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0-61c.c58792e(https://github.com/61c-teach/logisim-evolution).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -8,9 +8,11 @@
       <a name="facing" val="west"/>
     </tool>
     <tool name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
     </tool>
     <tool name="Probe">
+      <a name="appearance" val="classic"/>
       <a name="radix" val="16"/>
     </tool>
     <tool name="Tunnel">
@@ -27,17 +29,10 @@
       <a name="width" val="8"/>
     </tool>
   </lib>
-  <lib desc="#Gates" name="1">
-    <tool name="PLA">
-      <a name="table" val=""/>
-    </tool>
-  </lib>
+  <lib desc="#Gates" name="1"/>
   <lib desc="#Base" name="2">
     <tool name="Text Tool">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="halign" val="center"/>
-      <a name="text" val=""/>
-      <a name="valign" val="base"/>
     </tool>
   </lib>
   <main name="AND2"/>
@@ -57,17 +52,12 @@
     <tool lib="2" name="Wiring Tool"/>
     <tool lib="2" name="Text Tool">
       <a name="font" val="SansSerif plain 12"/>
-      <a name="halign" val="center"/>
-      <a name="text" val=""/>
-      <a name="valign" val="base"/>
     </tool>
     <sep/>
     <tool lib="0" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
     </tool>
     <tool lib="0" name="Pin">
-      <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </tool>
@@ -83,10 +73,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="AND2"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="clabelup" val="east"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(290,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -105,7 +92,7 @@
       <a name="locked" val="true"/>
     </comp>
     <comp lib="1" loc="(220,120)" name="AND Gate"/>
-    <comp lib="2" loc="(193,49)" name="Text">
+    <comp lib="2" loc="(190,45)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Sample Circuit"/>
     </comp>
@@ -121,10 +108,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="NAND2"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="clabelup" val="east"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(290,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -142,15 +126,24 @@
       <a name="label" val="A"/>
       <a name="locked" val="true"/>
     </comp>
+    <comp lib="1" loc="(150,150)" name="NOT Gate"/>
+    <comp lib="1" loc="(150,90)" name="NOT Gate"/>
+    <comp lib="1" loc="(270,120)" name="OR Gate"/>
+    <wire from="(150,150)" to="(200,150)"/>
+    <wire from="(150,90)" to="(190,90)"/>
+    <wire from="(190,100)" to="(220,100)"/>
+    <wire from="(190,90)" to="(190,100)"/>
+    <wire from="(200,140)" to="(200,150)"/>
+    <wire from="(200,140)" to="(220,140)"/>
+    <wire from="(270,120)" to="(290,120)"/>
+    <wire from="(90,150)" to="(120,150)"/>
+    <wire from="(90,90)" to="(120,90)"/>
   </circuit>
   <circuit name="NOR2">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="NOR2"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="clabelup" val="east"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(290,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -168,21 +161,28 @@
       <a name="label" val="A"/>
       <a name="locked" val="true"/>
     </comp>
+    <comp lib="1" loc="(150,150)" name="NOT Gate"/>
+    <comp lib="1" loc="(150,90)" name="NOT Gate"/>
+    <comp lib="1" loc="(240,120)" name="AND Gate"/>
+    <wire from="(150,100)" to="(190,100)"/>
+    <wire from="(150,150)" to="(190,150)"/>
+    <wire from="(150,90)" to="(150,100)"/>
+    <wire from="(190,140)" to="(190,150)"/>
+    <wire from="(240,120)" to="(290,120)"/>
+    <wire from="(90,150)" to="(120,150)"/>
+    <wire from="(90,90)" to="(120,90)"/>
   </circuit>
   <circuit name="XOR2">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="XOR2"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="clabelup" val="east"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(400,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="RESULT"/>
-      <a name="output" val="true"/>
       <a name="locked" val="true"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(90,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -194,15 +194,39 @@
       <a name="label" val="A"/>
       <a name="locked" val="true"/>
     </comp>
+    <comp lib="1" loc="(170,190)" name="NOT Gate"/>
+    <comp lib="1" loc="(170,50)" name="NOT Gate"/>
+    <comp lib="1" loc="(290,170)" name="AND Gate"/>
+    <comp lib="1" loc="(290,70)" name="AND Gate"/>
+    <comp lib="1" loc="(380,120)" name="OR Gate"/>
+    <wire from="(110,100)" to="(220,100)"/>
+    <wire from="(110,150)" to="(110,190)"/>
+    <wire from="(110,150)" to="(200,150)"/>
+    <wire from="(110,190)" to="(140,190)"/>
+    <wire from="(110,50)" to="(110,90)"/>
+    <wire from="(110,50)" to="(140,50)"/>
+    <wire from="(110,90)" to="(110,100)"/>
+    <wire from="(170,190)" to="(240,190)"/>
+    <wire from="(170,50)" to="(240,50)"/>
+    <wire from="(200,90)" to="(200,150)"/>
+    <wire from="(200,90)" to="(240,90)"/>
+    <wire from="(220,100)" to="(220,150)"/>
+    <wire from="(220,150)" to="(240,150)"/>
+    <wire from="(290,170)" to="(320,170)"/>
+    <wire from="(290,70)" to="(320,70)"/>
+    <wire from="(320,100)" to="(330,100)"/>
+    <wire from="(320,140)" to="(320,170)"/>
+    <wire from="(320,140)" to="(330,140)"/>
+    <wire from="(320,70)" to="(320,100)"/>
+    <wire from="(380,120)" to="(400,120)"/>
+    <wire from="(90,150)" to="(110,150)"/>
+    <wire from="(90,90)" to="(110,90)"/>
   </circuit>
   <circuit name="MUX2">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="MUX2"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="clabelup" val="east"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(430,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -225,15 +249,32 @@
       <a name="label" val="A"/>
       <a name="locked" val="true"/>
     </comp>
+    <comp lib="1" loc="(190,130)" name="NOT Gate"/>
+    <comp lib="1" loc="(270,110)" name="AND Gate"/>
+    <comp lib="1" loc="(270,190)" name="AND Gate"/>
+    <comp lib="1" loc="(380,120)" name="OR Gate"/>
+    <wire from="(130,130)" to="(130,210)"/>
+    <wire from="(130,130)" to="(160,130)"/>
+    <wire from="(130,210)" to="(220,210)"/>
+    <wire from="(190,130)" to="(220,130)"/>
+    <wire from="(270,110)" to="(320,110)"/>
+    <wire from="(270,190)" to="(300,190)"/>
+    <wire from="(300,150)" to="(300,190)"/>
+    <wire from="(300,150)" to="(330,150)"/>
+    <wire from="(320,100)" to="(320,110)"/>
+    <wire from="(320,100)" to="(330,100)"/>
+    <wire from="(330,140)" to="(330,150)"/>
+    <wire from="(380,120)" to="(430,120)"/>
+    <wire from="(90,150)" to="(90,170)"/>
+    <wire from="(90,170)" to="(220,170)"/>
+    <wire from="(90,210)" to="(130,210)"/>
+    <wire from="(90,90)" to="(220,90)"/>
   </circuit>
   <circuit name="MUX4">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="MUX4"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="clabelup" val="east"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(690,130)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -271,5 +312,28 @@
       <a name="label" val="A"/>
       <a name="locked" val="true"/>
     </comp>
+    <comp loc="(410,170)" name="MUX2"/>
+    <comp loc="(410,70)" name="MUX2"/>
+    <comp loc="(660,130)" name="MUX2"/>
+    <wire from="(130,150)" to="(130,170)"/>
+    <wire from="(130,170)" to="(190,170)"/>
+    <wire from="(130,90)" to="(130,110)"/>
+    <wire from="(130,90)" to="(190,90)"/>
+    <wire from="(160,110)" to="(160,230)"/>
+    <wire from="(160,110)" to="(190,110)"/>
+    <wire from="(160,230)" to="(190,230)"/>
+    <wire from="(190,210)" to="(190,230)"/>
+    <wire from="(410,130)" to="(440,130)"/>
+    <wire from="(410,150)" to="(410,170)"/>
+    <wire from="(410,150)" to="(440,150)"/>
+    <wire from="(410,70)" to="(410,130)"/>
+    <wire from="(440,170)" to="(440,270)"/>
+    <wire from="(660,130)" to="(690,130)"/>
+    <wire from="(90,110)" to="(130,110)"/>
+    <wire from="(90,150)" to="(130,150)"/>
+    <wire from="(90,190)" to="(190,190)"/>
+    <wire from="(90,230)" to="(160,230)"/>
+    <wire from="(90,270)" to="(440,270)"/>
+    <wire from="(90,70)" to="(190,70)"/>
   </circuit>
 </project>
